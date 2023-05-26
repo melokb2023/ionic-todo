@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
-
+import { Platform } from 'ionic-angular';
+import { HomePage } from '../pages/home/home';
 @Component({
-  selector: 'app-root',
-  templateUrl: 'app.component.html',
-  styleUrls: ['app.component.scss'],
+  templateUrl: 'app.html',
 })
-export class AppComponent {
-  constructor() {}
+export class MyApp {
+  rootPage: any = HomePage;
+  constructor(platform: Platform) {
+    platform.ready().then(() => {});
+  }
 }
